@@ -1,0 +1,1 @@
+$(function(){$(".side-nav-left").sideNav({edge:"left",closeOnClick:false});$(".slider").slider({full_width:true});$("#fakeLoader").fakeLoader({zIndex:999,spinner:"spinner4",bgColor:"#ffffff"});$(".collapsible").collapsible({accordion:false});$(".image-popup").magnificPopup({type:"image",removalDelay:300,mainClass:"mfp-fade"})});
