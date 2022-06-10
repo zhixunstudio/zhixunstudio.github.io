@@ -23,25 +23,25 @@
 </head>
 <body class="container">
 <div class="main-page">
-    <form method="post" action="http://8.142.37.180:8090/minitest">
+    <form method="post" action="http://8.142.37.180:8090/minitest" id="uplaodtask">
         <div class="form-group">
             <label for="customid">客户ID</label>
-            <input type="text" class="form-control" id="customid" placeholder="请输入客户ID">
+            <input type="text" class="form-control" id="customid" placeholder="请输入客户ID" form="uplaodtask">
         </div>
         <div class="form-group">
             <label for="taskcontent">任务内容</label>
-            <textarea rows="10" id="taskcontent" name="taskcont" class="form-control"></textarea>
+            <textarea rows="10" id="taskcontent" name="taskcont" class="form-control" form="uplaodtask"></textarea>
         </div>
         <div class="form-group">
             <label for="format">格式要求</label>
-            <textarea class="form-control" rows="3" id="format" name="formattext" placeholder="请输入客户要的格式要求"></textarea>
+            <textarea class="form-control" rows="3" id="format" name="formattext" placeholder="请输入客户要的格式要求" form="uplaodtask"></textarea>
         </div>
         <div class="form-group">
             <label for="money">任务报酬</label>
-            <input type="text" class="form-control" id="money" name="taskmoney">
+            <input type="text" class="form-control" id="money" name="taskmoney" form="uplaodtask">
         </div>
         <div class="form-group">
-            <input class="btn btn-primary" type="button" value="提交">
+            <input class="btn btn-primary" type="button" value="提交" form="uplaodtask">
             </div>
     </form>
 </div>
