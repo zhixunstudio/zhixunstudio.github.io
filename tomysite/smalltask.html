@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>upload minitask</title>
+    <!--    CSS文件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <!--    JS文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <style>
+        .main-page {
+        padding:20px 0px;
+        }
+        h5 {
+        font-weight:bold;
+        font-family: SimHei;
+        }
+
+    </style>
+</head>
+<body class="container">
+<div class="main-page">
+    <form method="post" action="http://8.142.37.180:8090/minitask">
+        <div class="form-group">
+            <label for="customid">客户ID</label>
+            <input type="text" class="form-control" id="customid" placeholder="请输入客户ID">
+        </div>
+        <div class="form-group">
+            <label for="taskcontent">任务内容</label>
+            <textarea rows="10" id="taskcontent" name="taskcont" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="format">格式要求</label>
+            <textarea class="form-control" rows="3" id="format" name="formattext" placeholder="请输入客户要的格式要求"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="money">任务报酬</label>
+            <input type="text" class="form-control" id="money" name="taskmoney">
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="button" value="提交">
+            </div>
+    </form>
+</div>
+</body>
+</html>
