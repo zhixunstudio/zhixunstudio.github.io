@@ -11,24 +11,27 @@
     <!--    JS文件 -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script>
-        $(function () {
-                //时间控制每隔200毫秒检查当前页面高度以及滚动高度，测试多遍，cpu占用极少，不明显影响程序运行速度
-                window.setInterval("reinitIframe()", 200);
-                       })
-
-
-                //iframe自适应高度,解决了动态更换页面高度无法自适应问题
-                function reinitIframe() {
-                var iframe = document.getElementById("mainFrame");
-                try {
-                    //bHeight 和 dHeight 如果相等，用其一等于iframe.height 即可
-                    // var bHeight = iframe.contentWindow.document.body.scrollHeight;
-                    var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-                    // var height = Math.max(bHeight, dHeight);
-                    console.log(dHeight)
-                    iframe.height = dHeight;
-                } catch (ex) { }
+try {
+    var timer;
+    $("#form-iframe").load(function () {
+        if (timer) {
+            clearInterval(timer);
+        }
+        //pre_height用于记录上次检查时body的高度
+        //mainheight用于获取本次检查时body的高度，并赋予iframe的高度
+        var mainheight, pre_height;
+        var frame = $(this);
+        timer = setInterval(function () {
+            mainheight = $(document.body).height() + 10;
+            if (mainheight != pre_height) {
+                pre_height = mainheight;
+                frame.height(Math.max(mainheight, 350));
             }
+        }, 500);//每0.5秒检查一次
+    });
+} catch (e) {
+}
+
     </script>
     <style>
         .main-page {
@@ -43,7 +46,10 @@
 </head>
 <body class="container-fluid">
 <div class="row">
-    <iframe id="mainFrame" name="mainFrame" src="http://8.142.37.180:8090/manager" style="width:100%;" frameborder="0" scrolling="no" onLoad="this.height=100"></iframe>
+     <div class="iframe My-home embed-responsive embed-responsive-16by9" id="taskheight">
+        <iframe src="http://8.142.37.180:8090/manager" class="embed-responsive-item" frameborder="0" height='100%' id="form-iframe" name="formIframe" scrolling="no" width='100%'></iframe>
+ </div>
+<!--    <iframe id="mainFrame" name="mainFrame" src="http://8.142.37.180:8090/manager" style="width:100%;" frameborder="0" scrolling="no" height="1000px"></iframe>-->
 <!--    <iframe src="http://8.142.37.180:8090/manager" id="mainFrame" width="100%" height="2000px"  frameborder="0" scrolling="auto"></iframe>-->
 </div>
 </body>
