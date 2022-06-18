@@ -1244,8 +1244,9 @@ pre[class*="language-"] {
 <body>
   <article class="markdown-body"><h3 class="atx" id="lammps在win10win11系统中运行">LAMMPS在win10/win11系统中运行</h3>
 <p>快捷键 win+R，输入cmd，打开命令行窗口，输入以下命令切换至你的工作目录</p>
+    <p><img alt="" src="images/2022-06-09-15-48-58-image.png"></p>
 <pre><code class="fenced-code-block">cd /d 工作目录的路径</code></pre>
-<p><img alt="" src="images/2022-06-09-15-48-58-image.png"></p>
+
 <p>然后继续输入以下命令</p>
 <pre><code class="fenced-code-block">#运行命令中，4代表核数，melt.in是要运行的文件
 mpiexec -np 4 lmp -in melt.in</code></pre>
