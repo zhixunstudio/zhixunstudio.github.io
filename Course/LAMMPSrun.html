@@ -1242,19 +1242,30 @@ pre[class*="language-"] {
   <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
 </head>
 <body>
-  <article class="markdown-body"><h3 class="atx" id="lammps在win10win11系统中运行">LAMMPS在win10/win11系统中运行</h3>
-<p>快捷键 win+R，输入cmd，打开命令行窗口，输入以下命令切换至你的工作目录</p>
-    <p><img alt="" src="images/2022-06-09-15-48-58-image.png"></p>
-<pre><code class="fenced-code-block">cd /d 工作目录的路径</code></pre>
-
+  <article class="markdown-body"><h2 class="atx" id="lammps在win10win11系统中运行">LAMMPS在win10/win11系统中运行</h2>
+<h3 class="atx" id="最简单的运行方式">最简单的运行方式</h3>
+<blockquote>
+<p>选中要运行的文件</p>
+</blockquote>
+<p><img alt="image.png" src="https://cdn.nlark.com/yuque/0/2022/png/28536828/1655888387721-fc5e6169-d422-4293-84b5-5eeb6bac3bd5.png#clientId=u063655ad-8c34-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=602&amp;id=ua05882c4&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=753&amp;originWidth=989&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=187471&amp;status=done&amp;style=none&amp;taskId=u695b7e28-e1de-4ba8-851b-4dd5c5801e5&amp;title=&amp;width=791.2"></p>
+<blockquote>
+<p>点击右键，选择第二个选项</p>
+</blockquote>
+<p><img alt="image.png" src="https://cdn.nlark.com/yuque/0/2022/png/28536828/1655888681719-6148ed66-62cd-4f73-b677-3d3e473a132b.png#clientId=u063655ad-8c34-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=735&amp;id=u2935d67e&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=919&amp;originWidth=804&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=245412&amp;status=done&amp;style=none&amp;taskId=uc1978996-1439-4dc4-b728-ca42f6eb09d&amp;title=&amp;width=643.2"></p>
+<hr>
+<h3 class="atx" id="复杂的运行方式">复杂的运行方式</h3>
+<blockquote>
+<p><em>复杂的运行方式不适合刚刚入门的同学。
+*</em> 建议刚入门的同先多运行几遍，等学会了简单的方式再学习复杂的方式。</p>
+</blockquote>
+<p>快捷键 win+R，输入cmd，打开命令行窗口，输入以下命令切换至你的工作目录
+<img alt="image.png" src="https://cdn.nlark.com/yuque/0/2022/png/28536828/1655532408278-caf8dcc6-3840-49d7-bb34-d1ab549d86e6.png#clientId=u74edc8df-2674-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;id=uf64fc578&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=272&amp;originWidth=513&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=15404&amp;status=done&amp;style=none&amp;taskId=u44bebacd-1e58-4543-b4ff-c6927aa6e8d&amp;title=">
+cd /d <strong>工作目录的路径，如C:\LAMMPS 64-bit 17Feb2022-MPI\Examples\melt</strong></p>
 <p>然后继续输入以下命令</p>
 <pre><code class="fenced-code-block">#运行命令中，4代表核数，melt.in是要运行的文件
 mpiexec -np 4 lmp -in melt.in</code></pre>
-<h3 class="atx" id=""></h3>
-<h3 class="atx" id="lammps在linux系统中运行">LAMMPS在Linux系统中运行</h3>
-<pre><code class="fenced-code-block">mpirun -np 4 lmp -in melt.in
-mpirun -np 4 lmp -in melt.in
-</code></pre>
+<h2 class="atx" id="lammps在linux系统中运行">LAMMPS在Linux系统中运行</h2>
+<pre><code class="fenced-code-block">mpirun -np 4 lmp -in melt.in</code></pre>
 </article>
 </body>
 </html>
