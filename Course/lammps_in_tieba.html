@@ -1,7 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -10,30 +10,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div style="width: 750px; margin: auto;"><h1
-        style="text-align:center;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:21px;font-weight:bold;display:table;margin:2em auto 1em;padding:0 1em;border-bottom:2px solid rgba(250, 81, 81, 1);color:#3f3f3f;margin-top: 0">
-    LAMMPS教程分享</h1>
-    <center>更新时间：2022-06-29</center>
+<div class="container">
+    <div class="col col-md-12">
+        <div><h1
+                style="text-align:center;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:21px;font-weight:bold;display:table;margin:2em auto 1em;padding:0 1em;border-bottom:2px solid rgba(250, 81, 81, 1);color:#3f3f3f;margin-top: 0">
+            LAMMPS教程分享</h1>
+            <center>更新时间：2022-06-29</center>
 
-        <blockquote
-                style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;font-style:normal;border-left:none;padding:1em;border-radius:8px;color:rgba(0,0,0,0.5);background:#f7f7f7;margin:2em 8px">
-            <p style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:1em;letter-spacing:0.1em;color:rgb(80, 80, 80);display:block">
-                在这里主要讨论与<strong style="text-align:left;line-height:1.75;color:rgba(250, 81, 81, 1);font-weight:bold">LAMMPS</strong>有关的知识与问题！
-            </p>
-            <p style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:1em;letter-spacing:0.1em;color:rgb(80, 80, 80);display:block">
-                主要结合我在学习LAMMPS过程中遇到的问题展开讨论。</p></blockquote>
-        <h3 style="text-align:left;line-height:1.2;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;font-weight:bold;margin:2em 8px 0.75em 0;padding-left:8px;border-left:3px solid rgba(250, 81, 81, 1);color:#3f3f3f">
-            安装问题</h3>
-        <h3 style="text-align:left;line-height:1.2;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;font-weight:bold;margin:2em 8px 0.75em 0;padding-left:8px;border-left:3px solid rgba(250, 81, 81, 1);color:#3f3f3f">
-            运行问题</h3>
-        <h3 style="text-align:left;line-height:1.2;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;font-weight:bold;margin:2em 8px 0.75em 0;padding-left:8px;border-left:3px solid rgba(250, 81, 81, 1);color:#3f3f3f">
-            其他问题</h3>
-        <h1 style="text-align:center;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:21px;font-weight:bold;display:table;margin:2em auto 1em;padding:0 1em;border-bottom:2px solid rgba(250, 81, 81, 1);color:#3f3f3f">
-            推荐阅读</h1>
-        <p style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;margin:1.5em 8px;letter-spacing:0.1em;color:#3f3f3f">
-            👉 待添加<br>👉 待添加<br>👉 待添加<br>👉 待添加</p>
-        <hr style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;border-style:solid;border-width:1px 0 0;border-color:rgba(0,0,0,0.1);-webkit-transform-origin:0 0;-webkit-transform:scale(1, 0.5);transform-origin:0 0;transform:scale(1, 0.5)">
-        <h3 style="text-align:center">可以扫码关注我的微信</h3>
+            <blockquote
+                    style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;font-style:normal;border-left:none;padding:1em;border-radius:8px;color:rgba(0,0,0,0.5);background:#f7f7f7;margin:2em 8px">
+                <p style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:1em;letter-spacing:0.1em;color:rgb(80, 80, 80);display:block">
+                    在这里主要讨论与<strong
+                        style="text-align:left;line-height:1.75;color:rgba(250, 81, 81, 1);font-weight:bold">LAMMPS</strong>有关的知识与问题！
+                </p>
+                <p style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:1em;letter-spacing:0.1em;color:rgb(80, 80, 80);display:block">
+                    主要结合我在学习LAMMPS过程中遇到的问题展开讨论。</p></blockquote>
+            <h3 style="text-align:left;line-height:1.2;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;font-weight:bold;margin:2em 8px 0.75em 0;padding-left:8px;border-left:3px solid rgba(250, 81, 81, 1);color:#3f3f3f">
+                安装问题</h3>
+            <h3 style="text-align:left;line-height:1.2;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;font-weight:bold;margin:2em 8px 0.75em 0;padding-left:8px;border-left:3px solid rgba(250, 81, 81, 1);color:#3f3f3f">
+                运行问题</h3>
+            <h3 style="text-align:left;line-height:1.2;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;font-weight:bold;margin:2em 8px 0.75em 0;padding-left:8px;border-left:3px solid rgba(250, 81, 81, 1);color:#3f3f3f">
+                其他问题</h3>
+            <h1 style="text-align:center;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:21px;font-weight:bold;display:table;margin:2em auto 1em;padding:0 1em;border-bottom:2px solid rgba(250, 81, 81, 1);color:#3f3f3f">
+                推荐阅读</h1>
+            <p style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;margin:1.5em 8px;letter-spacing:0.1em;color:#3f3f3f">
+                👉 待添加<br>👉 待添加<br>👉 待添加<br>👉 待添加</p>
+            <hr style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;border-style:solid;border-width:1px 0 0;border-color:rgba(0,0,0,0.1);-webkit-transform-origin:0 0;-webkit-transform:scale(1, 0.5);transform-origin:0 0;transform:scale(1, 0.5)">
+            <h3 style="text-align:center">可以扫码关注我的微信</h3>
 
             <figure style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;margin:1.5em 8px;color:#3f3f3f">
                 <img style="text-align:left;line-height:1.75;font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;font-size:15px;border-radius:4px;display:block;margin:0.1em auto 0.5em;width:20% !important"
@@ -41,7 +44,8 @@
                      title="null" alt=""></figure>
             <hr>
 
-    </center>
+        </div>
+    </div>
 </div>
 </body>
 </html>
