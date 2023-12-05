@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>测试前后端分离</title>
+    <style>
+			/*--预设--*/ 
+			body { padding:0px;margin: 0px; } 
+			#lyrow, #lyrow input, #lyrow textarea { font-size:12px;font-family: 'Microsoft YaHei', '微软雅黑', MicrosoftJhengHei, '华文细黑', STHeiti, MingLiu; } 
+			#lyrow { height:100vh;width: 100vw; } 
+			#lyrow div { min-height: 18px;  } 
+			#lyrow input, #lyrow textarea { border:rgb(235, 235, 235) 1px solid;border-radius: 3px;padding: 5px 8px;outline: 0; } 
+			#lyrow input:hover, #lyrow textarea:hover { border: 1px solid #6bc1f2; } 
+			/*--编辑--*/ 
+			#lyrow .main {  } 
+			#lyrow .i { background-color:rgba(191, 61, 191, 1); } 
+			#lyrow .j { background-color:rgba(125, 34, 125, 1); } 
+			#lyrow .k { background-color:rgba(84, 222, 192, 1);flex-direction:row;display:flex !important;padding:10px 0 10px 0; } 
+			#lyrow .l { background-color:rgba(230, 220, 83, 1);height:200px !important;justify-content:center;display:flex !important;align-items:center; } 
+			#lyrow .ii { width:70%;justify-content:center;display:flex !important; } 
+			#lyrow .jj { width:30%;justify-content:center;display:flex !important; } 
+			#lyrow .inputi { margin:2px 0 2px 0;height:30px !important;width:80px !important;border-radius:5px 5px 5px 5px; } 
+			#lyrow .inputj { border-radius:5px 5px 5px 5px;width:60%; } 
+			#lyrow .spani { justify-content:center;display:flex !important;height:40%;text-align:center;vertical-align:middle; } 
+			#lyrow .foot { align-items:flex-end;display:flex !important;background-color:rgba(163, 56, 163, 0.23);justify-content:center; } 
+			#lyrow .footspan { justify-content:center;display:flex !important;text-align:center;font-size:7px; } 
+</style>
+</head>
+
+<body>
+
+    <div id="app">
+		<div id="lyrow">
+		<div class="main">
+		<div class="i"> </div>
+		<div class="j"> 
+		<div class="k"> 
+		<div class="ii">     
+		    <input type="text" ref="inputDom" class="inputj"></div>
+		<div class="jj">     
+		    <input type="button" name="button" value="查询进度" @click="login"></div></div>
+		<div class="l"> 
+		    <span class="spani">{{biao}} {{message}}</span></div></div></div></div>
+		<div class="foot ui-sortable-helper"> 
+		    <span class="footspan">Design by Zhixun 2023</span></div>
+		</div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "你好前后端分离",
+                biao : ""
+            },
+            methods: {
+                login: function() {
+                    var that = this
+                    axios.get("http://8.142.37.180/test/")
+                        .then(function(response) {
+                            console.log(response)
+                            that.message = response.data.key2
+                            that.biao = that.$refs.inputDom.value
+                        })
+
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
