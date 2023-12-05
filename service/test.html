@@ -60,11 +60,11 @@
             methods: {
                 login: function() {
                     var that = this
-                    axios.get("http://8.142.37.180/test/")
+                    axios.get("http://8.142.37.180/test/?bibtex="+that.$refs.inputDom.value)
                         .then(function(response) {
                             console.log(response)
                             that.message = response.data.key2
-                            that.biao = that.$refs.inputDom.value
+                            
                         })
 
                 }
